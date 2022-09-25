@@ -1,13 +1,12 @@
 import React from 'react';
 import {createRoot} from 'react-dom/client';
-import {ThemeProvider} from "styled-components";
 
 
 import GlobalContextProvider from './contexts/Global';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {darkTheme, lightTheme} from "./theme";
+
 
 
 
@@ -18,11 +17,9 @@ const root = createRoot(document.getElementById("root") as HTMLElement);
 
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={localStorage.getItem('theme') === 'dark' ? darkTheme : lightTheme}>
       <GlobalContextProvider>
         <App />
       </GlobalContextProvider>
-    </ThemeProvider>
   </React.StrictMode>
 )
 
