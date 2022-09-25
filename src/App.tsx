@@ -26,19 +26,20 @@ const TodoContainer = styled.div`
   width: min(100% - 6rem, 600px);
   margin-inline: auto;
   box-shadow: 0px 0px 20px -5px #ccc;
+  overflow-y: hidden;
 `;
 
 
 const TodoTop = styled.div`
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 8px;
   width: 100%;
 
   & input {
     flex: 1;
     border: none;
     outline: none;
-    padding: 8px;
+    padding: 12px;
     line-height: 2;
   }
 `;
@@ -48,6 +49,8 @@ const Todos = styled.div`
   flex-direction: column;
   width: 100%;
   gap: 0.5px;
+  overflow-y: scroll;
+  height: 100%;
 `
 
 
